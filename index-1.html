@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lista de Presentes • Layane & Anderson</title>
+<style>
+:root {
+  --olive:#4d5a36; --olive2:#69764d; --cream:#f7f4ea;
+  --line:#d8d4c5; --text:#30342a; --soft:#ebe8da;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--cream);color:var(--text);font-family:Georgia,'Times New Roman',serif}
+.page{max-width:980px;margin:auto;padding:24px 16px 48px}
+.hero{text-align:center;padding:30px 20px 20px;position:relative}
+.hero:before,.hero:after{content:"❦";position:absolute;color:var(--olive);font-size:52px;top:24px;opacity:.7}
+.hero:before{left:8px} .hero:after{right:8px;transform:scaleX(-1)}
+.kicker{letter-spacing:4px;font-size:13px;color:var(--olive);font-weight:bold}
+h1{font-size:clamp(42px,7vw,76px);font-weight:400;font-style:italic;margin:8px 0 0;color:var(--olive);line-height:.95}
+.subtitle{letter-spacing:5px;font-size:18px;margin:10px 0 12px}
+.names{font-size:clamp(30px,5vw,48px);font-style:italic;color:var(--olive);margin:10px 0}
+.intro{max-width:650px;margin:0 auto;color:#575b4d;line-height:1.6;font-size:17px}
+.ornament{color:var(--olive);font-size:25px;margin:12px}
+.panel{background:rgba(255,255,255,.45);border:1px solid var(--line);border-radius:24px;padding:18px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.gift{background:#fbfaf5;border:1px solid #ddd9cb;border-radius:15px;padding:16px;display:flex;justify-content:space-between;align-items:center;gap:12px;min-height:120px;box-shadow:0 2px 8px rgba(50,55,35,.04)}
+.gift h3{margin:0 0 9px;font-size:18px;font-weight:400}
+.price{display:inline-block;margin:0;background:var(--olive);color:white;border-radius:999px;padding:7px 14px;font-weight:bold;font-family:Arial,sans-serif}
+button{border:0;background:var(--olive2);color:#fff;border-radius:999px;padding:10px 15px;font-weight:bold;cursor:pointer;white-space:nowrap}
+button:hover{filter:brightness(.92)}
+.pix{margin-top:24px;background:#e9e5d5;border:1px solid #d2ccb8;border-radius:22px;padding:24px;text-align:center}
+.pix h2{margin:0 0 8px;color:var(--olive);font-size:28px;font-style:italic;font-weight:400}
+.key{font-family:Arial,sans-serif;font-size:20px;font-weight:bold;letter-spacing:1px}
+.copy{margin-top:12px;background:var(--olive)}
+.note{font-size:14px;color:#666b5c;margin-top:10px}
+.modal{display:none;position:fixed;inset:0;background:rgba(25,30,18,.45);align-items:center;justify-content:center;padding:18px;z-index:10}
+.modal-box{background:var(--cream);border-radius:22px;max-width:440px;width:100%;padding:28px;text-align:center;border:1px solid var(--line)}
+.modal-box h2{color:var(--olive);font-style:italic;font-weight:400}
+.close{background:#777;margin-left:7px}
+footer{text-align:center;color:var(--olive);font-style:italic;margin-top:30px}
+@media(max-width:650px){.grid{grid-template-columns:1fr}.gift{min-height:110px}.hero:before,.hero:after{font-size:32px}.panel{padding:10px}}
+</style>
+</head>
+<body>
+<main class="page">
+<section class="hero">
+  <div class="kicker">LISTA DE PRESENTES</div>
+  <h1>de casamento</h1>
+  <div class="subtitle">✦</div>
+  <div class="names">Layane &amp; Anderson</div>
+  <p class="intro">Cada presente é um gesto de carinho que nos aproxima ainda mais desse nosso grande sonho.</p>
+  <div class="ornament">♥</div>
+</section>
+
+<section class="panel">
+  <div class="grid"><article class="gift">
+      <div>
+        <h3>Kit de organização para a casa</h3>
+        <p class="price">R$ 150</p>
+      </div>
+      <button onclick="chooseGift('Kit de organização para a casa', 150)">Escolher</button>
+    </article>
+<article class="gift">
+      <div>
+        <h3>Kit de decoração romântica</h3>
+        <p class="price">R$ 180</p>
+      </div>
+      <button onclick="chooseGift('Kit de decoração romântica', 180)">Escolher</button>
+    </article>
+<article class="gift">
+      <div>
+        <h3>Kit de utensílios de cozinha</h3>
+        <p class="price">R$ 180</p>
+      </div>
+      <button onclick="chooseGift('Kit de utensílios de cozinha', 180)">Escolher</button>
+    </article>
+<article class="gift">
+      <div>
+        <h3>Presente surpresa para os noivos</h3>
+        <p class="price">R$ 150</p>
+      </div>
+      <button onclick="chooseGift('Presente surpresa para os noivos', 150)">Escolher</button>
+    </article>
+<article class="gift">
+      <div>
+        <h3>Brinde dos recém-casados</h3>
+        <p class="price">R$ 200</p>
+      </div>
+      <button onclick="chooseGift('Brinde dos recém-casados', 200)">Escolher</button>
+    </article>
+<article class="gift">
+      <div>
+        <h3>Liquidificador</h3>
+        <p class="price">R$ 200</p>
+      </div>
+      <button onclick="chooseGift('Liquidificador', 200)">Escolher</button>
+    </article>
+<article class="gift">
+      <div>
+        <h3>Kit de toalhas</h3>
+        <p class="price">R$ 220</p>
+      </div>
+      <button onclick="chooseGift('Kit de toalhas', 220)">Escolher</button>
+    </article>
+<article class="gift">
+      <div>
+        <h3>Aspirador de pó</h3>
+        <p class="price">R$ 400</p>
+      </div>
+      <button onclick="chooseGift('Aspirador de pó', 400)">Escolher</button>
+    </article>
+<article class="gift">
+      <div>
+        <h3>Air fryer</h3>
+        <p class="price">R$ 500</p>
+      </div>
+      <button onclick="chooseGift('Air fryer', 500)">Escolher</button>
+    </article>
+<article class="gift">
+      <div>
+        <h3>Cafeteira</h3>
+        <p class="price">R$ 280</p>
+      </div>
+      <button onclick="chooseGift('Cafeteira', 280)">Escolher</button>
+    </article>
+<article class="gift">
+      <div>
+        <h3>Faqueiro completo</h3>
+        <p class="price">R$ 350</p>
+      </div>
+      <button onclick="chooseGift('Faqueiro completo', 350)">Escolher</button>
+    </article>
+<article class="gift">
+      <div>
+        <h3>Jogo de jantar</h3>
+        <p class="price">R$ 350</p>
+      </div>
+      <button onclick="chooseGift('Jogo de jantar', 350)">Escolher</button>
+    </article>
+<article class="gift">
+      <div>
+        <h3>Almofadas e manta para o sofá</h3>
+        <p class="price">R$ 300</p>
+      </div>
+      <button onclick="chooseGift('Almofadas e manta para o sofá', 300)">Escolher</button>
+    </article>
+<article class="gift">
+      <div>
+        <h3>Jogo de cama completo</h3>
+        <p class="price">R$ 450</p>
+      </div>
+      <button onclick="chooseGift('Jogo de cama completo', 450)">Escolher</button>
+    </article>
+<article class="gift">
+      <div>
+        <h3>Jogo de panelas</h3>
+        <p class="price">R$ 500</p>
+      </div>
+      <button onclick="chooseGift('Jogo de panelas', 500)">Escolher</button>
+    </article>
+<article class="gift">
+      <div>
+        <h3>Jantar romântico do casal</h3>
+        <p class="price">R$ 300</p>
+      </div>
+      <button onclick="chooseGift('Jantar romântico do casal', 300)">Escolher</button>
+    </article>
+<article class="gift">
+      <div>
+        <h3>Uma diária especial na lua de mel</h3>
+        <p class="price">R$ 450</p>
+      </div>
+      <button onclick="chooseGift('Uma diária especial na lua de mel', 450)">Escolher</button>
+    </article>
+<article class="gift">
+      <div>
+        <h3>Passeio romântico</h3>
+        <p class="price">R$ 250</p>
+      </div>
+      <button onclick="chooseGift('Passeio romântico', 250)">Escolher</button>
+    </article>
+<article class="gift">
+      <div>
+        <h3>Kit de decoração romântica</h3>
+        <p class="price">R$ 180</p>
+      </div>
+      <button onclick="chooseGift('Kit de decoração romântica', 180)">Escolher</button>
+    </article>
+<article class="gift">
+      <div>
+        <h3>Kit de organização para a casa</h3>
+        <p class="price">R$ 150</p>
+      </div>
+      <button onclick="chooseGift('Kit de organização para a casa', 150)">Escolher</button>
+    </article>
+<article class="gift">
+      <div>
+        <h3>Kit de utensílios de cozinha</h3>
+        <p class="price">R$ 180</p>
+      </div>
+      <button onclick="chooseGift('Kit de utensílios de cozinha', 180)">Escolher</button>
+    </article></div>
+</section>
+
+<section class="pix">
+  <h2>Para nos presentear</h2>
+  <p>Escolha um item da nossa lista e faça a contribuição via PIX.</p>
+  <div class="key">119.873.384-56</div>
+  <div>Layane Yara da Silva Santos • Nubank</div>
+  <button class="copy" onclick="copyPix()">Copiar chave PIX</button>
+  <div class="note" id="copied"></div>
+</section>
+
+<footer>Gratidão por fazer parte desse momento tão especial! ♥</footer>
+</main>
+
+<div class="modal" id="modal">
+  <div class="modal-box">
+    <h2 id="modalTitle">Presente escolhido</h2>
+    <p id="modalText"></p>
+    <p>Agora é só realizar o PIX usando a chave abaixo:</p>
+    <div class="key">119.873.384-56</div>
+    <button class="copy" onclick="copyPix()">Copiar chave PIX</button>
+    <button class="close" onclick="closeModal()">Fechar</button>
+    <p class="note">Depois, envie o comprovante pelo WhatsApp dos noivos.</p>
+  </div>
+</div>
+
+<script>
+function chooseGift(name,value){
+  document.getElementById('modalTitle').textContent='💚 '+name;
+  document.getElementById('modalText').textContent='Valor sugerido: R$ '+value;
+  document.getElementById('modal').style.display='flex';
+}
+function closeModal(){document.getElementById('modal').style.display='none'}
+function copyPix(){
+  navigator.clipboard.writeText('119.873.384-56');
+  document.getElementById('copied').textContent='Chave PIX copiada! 💚';
+}
+document.getElementById('modal').addEventListener('click',function(e){
+  if(e.target===this) closeModal();
+});
+</script>
+</body>
+</html>
